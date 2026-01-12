@@ -6,76 +6,40 @@
 <title>Playful Break</title>
 <style>
   body {
-    margin:0;
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    margin:0; height:100vh; display:flex; align-items:center; justify-content:center;
     background: linear-gradient(180deg,#1f0a2f,#0a0f1f);
-    color:#f8f0ff;
-    font-family: Inter, sans-serif;
-    text-align:center;
-    overflow:hidden;
+    color:#f8f0ff; font-family: Inter, sans-serif; text-align:center; overflow:hidden;
   }
   .card {
-    width: min(560px, 92vw);
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 22px;
-    padding: 28px 24px;
-    box-shadow: 0 18px 50px rgba(0,0,0,0.45);
-    backdrop-filter: blur(10px);
-    position:relative;
-    z-index:2;
+    width: min(560px, 92vw); background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 22px;
+    padding: 28px 24px; box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    backdrop-filter: blur(10px); position:relative; z-index:2;
   }
-  h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  p {
-    font-size: 16px;
-    line-height: 1.6;
-    opacity: 0.9;
-    margin-bottom: 18px;
-  }
+  h1 { font-size: 24px; margin-bottom: 10px; }
+  p { font-size: 16px; line-height: 1.6; opacity: 0.9; margin-bottom: 18px; }
   button {
-    padding: 12px 18px;
-    font-weight: 700;
-    color: #081324;
-    background: #d6a8ff;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
+    padding: 12px 18px; font-weight: 700; color: #081324;
+    background: #d6a8ff; border: none; border-radius: 12px; cursor: pointer;
     box-shadow: 0 8px 20px rgba(214,168,255,0.35);
   }
-  .sub {
-    font-size: 13px;
-    opacity: 0.7;
-    margin-top: 14px;
-  }
+  .sub { font-size: 13px; opacity: 0.7; margin-top: 14px; }
 </style>
 </head>
 <body>
   <div class="card">
     <h1>A playful pause 🎭</h1>
-    <p>
-      Before the big reveal, let’s lighten the mood.  
-      Imagine me cracking a silly joke just to see you smile.
-    </p>
-    <p>
-      Because even in serious moments, I want you to laugh with me.
-    </p>
+    <p>Before the big reveal, let’s lighten the mood. Imagine me cracking a silly joke just to see you smile.</p>
+    <p>Because even in serious moments, I want you to laugh with me.</p>
     <button onclick="next()">Next →</button>
     <div class="sub">Tap to see what’s behind the curtain.</div>
   </div>
 
 <script>
-  function next(){
-    window.location.href = "reveal.html";
-  }
+  function next(){ window.location.href = "reveal.html"; }
 </script>
 
-<!-- Background music autoplay (playful track for extra page) -->
+<!-- Background music autoplay (playful track) -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/03/14/audio_3f4a2f6f3b.mp3?filename=playful-background-110234.mp3" type="audio/mpeg">
 </audio>
