@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lockscreen</title>
+<style>
+  body {
+    margin:0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(180deg,#2b0a3d,#0a0f1f);
+    font-family: Inter, sans-serif;
+    overflow:hidden;
+  }
+  .lock {
+    text-align: center;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 22px;
+    padding: 28px 24px;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    backdrop-filter: blur(10px);
+    color:#f0f4ff;
+    width:min(400px,90vw);
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 80%;
+    margin-bottom: 16px;
+    font-size: 16px;
+    text-align:center;
+  }
+  button {
+    padding: 12px 18px;
+    font-weight: 700;
+    color: #081324;
+    background: #ffb6d6;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255,182,214,0.35);
+  }
+  .sub {
+    font-size: 13px;
+    opacity: 0.7;
+    margin-top: 14px;
+  }
+</style>
+</head>
+<body>
+  <div class="lock">
+    <h1>Enter the secret key 🔒</h1>
+    <input type="password" id="pass" placeholder="Type here...">
+    <br>
+    <button onclick="unlock()">Unlock</button>
+    <div class="sub">Hint: Top Secret</div>
+  </div>
+
+<script>
+  function unlock(){
+    const val = document.getElementById('pass').value;
+    if(val.toLowerCase() === "top secret"){
+      window.location.href = "mystery.html";
+    } else {
+      alert("Wrong key! Try again.");
+    }
+  }
+</script>
+</body>
+</html>
