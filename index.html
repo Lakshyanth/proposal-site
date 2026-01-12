@@ -4,13 +4,57 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Lockscreen</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 <style>
-  body {margin:0;height:100vh;display:flex;align-items:center;justify-content:center;
-        background:linear-gradient(180deg,#2b0a3d,#0a0f1f);font-family:Inter,sans-serif;}
-  .lock {text-align:center;background:rgba(255,255,255,0.08);border-radius:22px;padding:28px;
-         color:#f0f4ff;width:min(400px,90vw);}
-  input {padding:10px;border-radius:8px;border:none;width:80%;margin-bottom:16px;text-align:center;}
-  button {padding:12px 18px;font-weight:700;color:#081324;background:#ffb6d6;border:none;border-radius:12px;}
+  body {
+    margin:0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(180deg,#2b0a3d,#0a0f1f);
+    font-family:'Playfair Display',serif;
+    color:#f0f4ff;
+    overflow:hidden;
+  }
+  .lock {
+    text-align:center;
+    background:rgba(255,255,255,0.08);
+    border-radius:22px;
+    padding:28px;
+    width:min(400px,90vw);
+  }
+  h1 { margin-bottom:20px; }
+  input {
+    padding:10px;
+    border-radius:8px;
+    border:none;
+    width:80%;
+    margin-bottom:16px;
+    text-align:center;
+  }
+  button {
+    padding:12px 18px;
+    font-weight:700;
+    color:#081324;
+    background:#ffb6d6;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+  }
+  .hint { margin-top:10px; font-size:0.9em; opacity:0.8; }
+
+  /* Floating emojis */
+  .float {
+    position:fixed;
+    top:-40px;
+    font-size:26px;
+    animation: float 8s linear infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(0); opacity:1; }
+    100% { transform: translateY(100vh); opacity:0; }
+  }
 </style>
 </head>
 <body>
@@ -18,8 +62,14 @@
     <h1>Enter the secret key 🔒</h1>
     <input type="password" id="pass" placeholder="Type here..."><br>
     <button onclick="unlock()">Unlock</button>
-    <div class="sub">Hint: top secret</div>
+    <div class="hint">Hint: only she knows the key 💫</div>
   </div>
+
+  <!-- Floating emojis -->
+  <div class="float" style="left:20%;animation-delay:0s;">💗</div>
+  <div class="float" style="left:50%;animation-delay:2s;">🌙</div>
+  <div class="float" style="left:80%;animation-delay:4s;">💗</div>
+
 <script>
   function unlock(){
     const val = document.getElementById('pass').value;
@@ -28,5 +78,10 @@
     } else { alert("Wrong key! Try again."); }
   }
 </script>
+
+<!-- Ambient audio -->
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/16/audio_4a5b6c7d8e.mp3?filename=mystery-ambient-110456.mp3" type="audio/mpeg">
+</audio>
 </body>
 </html>
