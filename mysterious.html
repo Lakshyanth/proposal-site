@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mystery Girl</title>
+<style>
+  body {
+    margin:0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: radial-gradient(1000px 500px at 50% -100px, #1a2740 0%, #0b1220 60%), linear-gradient(180deg, #121a2b, #0b1220);
+    color:#e7eef9;
+    font-family: Inter, sans-serif;
+    text-align:center;
+    overflow:hidden;
+  }
+  .card {
+    width: min(560px, 92vw);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 22px;
+    padding: 28px 24px;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    backdrop-filter: blur(10px);
+    position:relative;
+    z-index:2;
+  }
+  h1 { font-size: 24px; margin-bottom: 10px; }
+  p { font-size: 16px; line-height: 1.6; opacity: 0.9; margin-bottom: 18px; }
+  button {
+    padding: 12px 18px; font-weight: 700; color: #081324;
+    background: #8dd6ff; border: none; border-radius: 12px; cursor: pointer;
+    box-shadow: 0 8px 20px rgba(141,214,255,0.35);
+  }
+  .sub { font-size: 13px; opacity: 0.7; margin-top: 14px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>A little mystery first ✨</h1>
+    <p>I wanted this to feel like a secret doorway—one step at a time, no noise, just you and me.</p>
+    <p>Promise: no scrolling, just gentle reveals. Ready for the next moment?</p>
+    <button onclick="next()">Next →</button>
+    <div class="sub">Tap when you’re ready.</div>
+  </div>
+
+<script>
+  function next(){ window.location.href = "atmosphere.html"; }
+</script>
+
+<!-- Background music autoplay (mysterious ambient track) -->
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/16/audio_4a5b6c7d8e.mp3?filename=mystery-ambient-110456.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
