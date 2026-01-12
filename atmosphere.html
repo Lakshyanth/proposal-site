@@ -1,45 +1,19 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Atmosphere</title>
-<style>
-  body {
-    margin:0; height:100vh; display:flex; align-items:center; justify-content:center;
-    background: linear-gradient(180deg,#1a1f33,#0a0f1f);
-    color:#f0f4ff; font-family: Inter, sans-serif; text-align:center; overflow:hidden;
-  }
-  .card {
-    width: min(560px, 92vw); background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15); border-radius: 22px;
-    padding: 28px 24px; box-shadow: 0 18px 50px rgba(0,0,0,0.45);
-    backdrop-filter: blur(10px); position:relative; z-index:2;
-  }
-  h1 { font-size: 24px; margin-bottom: 10px; }
-  p { font-size: 16px; line-height: 1.6; opacity: 0.9; margin-bottom: 18px; }
-  button {
-    padding: 12px 18px; font-weight: 700; color: #081324;
-    background: #9ad1ff; border: none; border-radius: 12px; cursor: pointer;
-    box-shadow: 0 8px 20px rgba(141,214,255,0.35);
-  }
-  .sub { font-size: 13px; opacity: 0.7; margin-top: 14px; }
-</style>
-</head>
-<body>
-  <div class="card">
-    <h1>Setting the atmosphere 🌙</h1>
-    <p>Imagine soft lights, a quiet evening, and the warmth of being together.</p>
-    <p>Every step is meant to make you smile. Ready for a playful twist?</p>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atmosphere</title></head>
+<body style="margin:0;height:100vh;display:flex;align-items:center;justify-content:center;
+             background:#1a1f33;color:#f0f4ff;font-family:Inter,sans-serif;text-align:center;padding:20px;">
+  <div>
+    <h1>Atmosphere</h1>
+    <p>She finds comfort in rainy days, when the world slows down and everything feels dull except your eyes.<br>
+    She smiles at surprises, because they make her feel special and loved (I hope).<br>
+    Her evenings are perfect when spent with her brother (maybe fam), friends, or maybe even someone who dreams of being her forever for the rest of life.</p>
     <button onclick="next()">Next →</button>
-    <div class="sub">Tap to continue.</div>
   </div>
-
 <script>
   function next(){ window.location.href = "extra.html"; }
 </script>
-
-<!-- Background music autoplay (dreamy ambient track) -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/03/23/audio_2e3a6b9b3f.mp3?filename=dreamy-ambient-111154.mp3" type="audio/mpeg">
 </audio>
