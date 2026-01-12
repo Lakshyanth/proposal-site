@@ -1,24 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Atmosphere</title>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 <style>
-  body {margin:0;height:100vh;display:flex;align-items:center;justify-content:center;
-        background:linear-gradient(180deg,#1a1f33,#0a0f1f);color:#f0f4ff;font-family:'Quicksand',sans-serif;text-align:center;padding:20px;}
-  button {margin-top:20px;padding:12px 18px;font-weight:700;color:#081324;background:#ffb6d6;border:none;border-radius:12px;}
+  body {
+    margin:0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(180deg,#1a1f33,#0a0f1f);
+    color:#f0f4ff;
+    font-family:'Quicksand',sans-serif;
+    text-align:center;
+    padding:20px;
+    overflow:hidden;
+  }
+  h1 { margin-bottom:20px; }
+  p { line-height:1.6; }
+  button {
+    margin-top:20px;
+    padding:12px 18px;
+    font-weight:700;
+    color:#081324;
+    background:#ffb6d6;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+  }
+  /* Floating hearts */
+  .heart {
+    position:fixed;
+    top:-40px;
+    font-size:24px;
+    animation: float 6s linear infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(0); opacity:1; }
+    100% { transform: translateY(100vh); opacity:0; }
+  }
 </style>
 </head>
 <body>
   <div>
     <h1>Atmosphere</h1>
-    <p>She finds comfort in rainy days, when the world slows down and everything feels dull except your eyes.<br>
-    She smiles at surprises, because they make her feel special and loved (I hope).<br>
-    Her evenings are perfect when spent with her brother (maybe fam), friends, or maybe even someone who dreams of being her forever for the rest of life.</p>
+    <p>
+      She finds comfort in rainy days, when the world slows down and everything feels dull except your eyes.<br>
+      She smiles at surprises, because they make her feel special and loved (I hope).<br>
+      Her evenings are perfect when spent with her brother (maybe fam), friends, or maybe even someone who dreams of being her forever for the rest of life.
+    </p>
     <button onclick="next()">Next →</button>
   </div>
-<script>function next(){ window.location.href = "extra.html"; }</script>
+
+  <!-- Floating hearts -->
+  <div class="heart" style="left:25%;animation-delay:0s;">💗</div>
+  <div class="heart" style="left:55%;animation-delay:2s;">💗</div>
+  <div class="heart" style="left:75%;animation-delay:4s;">💗</div>
+
+<script>
+  function next(){ window.location.href = "extra.html"; }
+</script>
+
+<!-- Dreamy audio -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/03/23/audio_2e3a6b9b3f.mp3?filename=dreamy-ambient-111154.mp3" type="audio/mpeg">
 </audio>
