@@ -8,7 +8,7 @@
 <style>
   body {
     margin:0;
-    height:100vh;
+    min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -16,8 +16,8 @@
     color:#fff;
     font-family:'Great Vibes',cursive;
     text-align:center;
-    overflow:hidden;
-    padding:20px;
+    padding:30px;
+    overflow-y:auto; /* makes it scrollable */
   }
   h1 { margin-bottom:20px; font-size:2.2em; }
   p { font-size:1.2em; line-height:1.6; margin-bottom:20px; }
@@ -46,7 +46,7 @@
 </head>
 <body>
   <div>
-    <h1>Proposal</h1>
+    <h1>A Proposal</h1>
     <p>
       So here I am, not just telling you, but showing you.<br><br>
       Ishita, will you be mine?<br><br>
@@ -64,13 +64,13 @@
     <button onclick="alert('💍 She said YES!')">💍</button>
   </div>
 
-  <!-- Tulips and stars shower -->
+  <!-- Tulips, stars, and hearts shower -->
   <div class="fall" style="left:10%;animation-delay:0s;">🌷</div>
-  <div class="fall" style="left:30%;animation-delay:2s;">⭐</div>
-  <div class="fall" style="left:50%;animation-delay:4s;">🌷</div>
-  <div class="fall" style="left:70%;animation-delay:1s;">⭐</div>
-  <div class="fall" style="left:85%;animation-delay:3s;">🌷</div>
-  <div class="fall" style="left:20%;animation-delay:5s;">⭐</div>
+  <div class="fall" style="left:25%;animation-delay:2s;">⭐</div>
+  <div class="fall" style="left:40%;animation-delay:4s;">💗</div>
+  <div class="fall" style="left:55%;animation-delay:1s;">🌷</div>
+  <div class="fall" style="left:70%;animation-delay:3s;">⭐</div>
+  <div class="fall" style="left:85%;animation-delay:5s;">💗</div>
 
   <!-- Soft piano background -->
   <audio autoplay loop>
