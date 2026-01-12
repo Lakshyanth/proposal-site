@@ -1,26 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Reveal</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 <style>
-  body {margin:0;height:100vh;display:flex;align-items:center;justify-content:center;
-        background:#000;color:#f0f4ff;font-family:'Playfair Display',serif;text-align:center;padding:20px;}
-  h1 {text-shadow:0 0 10px #fff;}
-  button {margin-top:20px;padding:12px 18px;font-weight:700;color:#081324;background:#ffb6d6;border:none;border-radius:12px;}
+  body {
+    margin:0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#000;
+    color:#f0f4ff;
+    font-family:'Playfair Display',serif;
+    text-align:center;
+    padding:20px;
+    overflow:hidden;
+  }
+  h1 {
+    text-shadow:0 0 10px #fff, 0 0 20px #ffb6d6;
+    margin-bottom:20px;
+  }
+  p { line-height:1.6; }
+  button {
+    margin-top:20px;
+    padding:12px 18px;
+    font-weight:700;
+    color:#081324;
+    background:#ffb6d6;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+  }
+  /* Floating hearts */
+  .heart {
+    position:fixed;
+    top:-40px;
+    font-size:26px;
+    animation: float 7s linear infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(0); opacity:1; }
+    100% { transform: translateY(100vh); opacity:0; }
+  }
 </style>
 </head>
 <body>
   <div>
     <h1>Reveal</h1>
-    <p>But the truth is… this girl isn’t just anyone on my Instagram or Threads.<br>
-    Every word, every symbol points to one and only name.<br>
-    Ishita ✨.<br>
-    You are the girl I’ve been loving from weeks, the one who makes my world feel like a starry night and makes me comfortable and I feel safe with u.</p>
+    <p>
+      But the truth is… this girl isn’t just anyone on my Instagram or Threads.<br>
+      Every word, every symbol points to one and only name.<br><br>
+      Ishita ✨.<br><br>
+      You are the girl I’ve been loving from weeks, the one who makes my world feel like a starry night and makes me comfortable and I feel safe with u.
+    </p>
     <button onclick="next()">Next →</button>
   </div>
-<script>function next(){ window.location.href = "proposal.html"; }</script>
+
+  <!-- Floating hearts -->
+  <div class="heart" style="left:20%;animation-delay:0s;">💗</div>
+  <div class="heart" style="left:50%;animation-delay:2s;">💗</div>
+  <div class="heart" style="left:80%;animation-delay:4s;">💗</div>
+
+<script>
+  function next(){ window.location.href = "proposal.html"; }
+</script>
+
+<!-- Suspenseful audio -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/03/22/audio_1a2b3c4d5e.mp3?filename=suspense-ambient-111045.mp3" type="audio/mpeg">
 </audio>
