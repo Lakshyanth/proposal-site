@@ -73,16 +73,18 @@
 
 <script>
   function unlock(){
-    const val = document.getElementById('pass').value;
-    if(val.toLowerCase() === "top secret"){
+    const val = document.getElementById('pass').value.trim().toLowerCase();
+    if(val === "the key to know the secret"){
       window.location.href = "mystery.html";
-    } else { alert("Wrong key! Try again."); }
+    } else {
+      alert("Wrong key! Try again.");
+    }
   }
 </script>
 
 <!-- Ambient audio -->
 <audio autoplay loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/16/audio_4a5b6c7d8e.mp3?filename=mystery-ambient-110456.mp3" type="audio/mpeg">
+  <source src="https://www.chosic.com/wp-content/uploads/2021/03/Scott-Buckley-In-Dreams.mp3" type="audio/mpeg">
 </audio>
 </body>
 </html>
