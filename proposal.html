@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin:0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#0a0f1f;
+    color:#fff;
+    font-family:'Great Vibes',cursive;
+    text-align:center;
+    overflow:hidden;
+    padding:20px;
+  }
+  h1 { margin-bottom:20px; font-size:2.2em; }
+  p { font-size:1.2em; line-height:1.6; margin-bottom:20px; }
+  button {
+    padding:12px 18px;
+    font-weight:700;
+    color:#081324;
+    background:#ffb6d6;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-family:Inter,sans-serif;
+  }
+  /* Falling animation */
+  .fall {
+    position:fixed;
+    top:-50px;
+    font-size:28px;
+    animation: fall 8s linear infinite;
+  }
+  @keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity:1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity:0; }
+  }
+</style>
+</head>
+<body>
+  <div>
+    <h1>Proposal</h1>
+    <p>
+      So here I am, not just telling you, but showing you.<br><br>
+      Ishita, will you be mine?<br><br>
+      Because with you, every day feels very special, every night feels like a sky full of stars, 
+      and every moment that I spend with you feels like home even it is through a screen. 
+      And idk y but I love the way u treat me, the way you talk with me, the way you are I love it, 
+      and your character, personality its just unmatchable. I feel like we r the main characters in this world 
+      and ik it's just been few weeks since we met but I felt safe with u, u r my comfort zone.<br><br>
+      And idk if this is the right time to do this but my heart just wanted to confess abt my feelings. 
+      Ik I didn't see you but that doesn't matter to me, idgaf abt how ppl look at you but I can promise that 
+      my feelings on you are not gonna change even if u look ugly or beautiful.<br><br>
+      And I am not a lover type guy I am just maintaining my acc to talk to you rn. 
+      I hope you would accept my proposal.
+    </p>
+    <button onclick="alert('💍 She said YES!')">💍</button>
+  </div>
+
+  <!-- Tulips and stars shower -->
+  <div class="fall" style="left:10%;animation-delay:0s;">🌷</div>
+  <div class="fall" style="left:30%;animation-delay:2s;">⭐</div>
+  <div class="fall" style="left:50%;animation-delay:4s;">🌷</div>
+  <div class="fall" style="left:70%;animation-delay:1s;">⭐</div>
+  <div class="fall" style="left:85%;animation-delay:3s;">🌷</div>
+  <div class="fall" style="left:20%;animation-delay:5s;">⭐</div>
+
+  <!-- Soft piano background -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7f9f3f6f3b.mp3?filename=soft-piano-ambient-110397.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
