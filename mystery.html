@@ -1,25 +1,71 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mystery Girl</title>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 <style>
-  body {margin:0;height:100vh;display:flex;align-items:center;justify-content:center;
-        background:#0b1220;color:#e7eef9;font-family:'Merriweather',serif;text-align:center;padding:20px;}
-  button {margin-top:20px;padding:12px 18px;font-weight:700;color:#081324;background:#ffb6d6;border:none;border-radius:12px;}
+  body {
+    margin:0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#0b1220;
+    color:#e7eef9;
+    font-family:'Merriweather',serif;
+    text-align:center;
+    padding:20px;
+    overflow:hidden;
+  }
+  h1 { margin-bottom:20px; }
+  p { line-height:1.6; }
+  button {
+    margin-top:20px;
+    padding:12px 18px;
+    font-weight:700;
+    color:#081324;
+    background:#ffb6d6;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+  }
+  /* Floating hearts */
+  .heart {
+    position:fixed;
+    top:-40px;
+    font-size:24px;
+    animation: float 6s linear infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(0); opacity:1; }
+    100% { transform: translateY(100vh); opacity:0; }
+  }
 </style>
 </head>
 <body>
   <div>
     <h1>Mystery Girl</h1>
-    <p>She is warm like a tulip, gentle like a petal.<br>
-    She is playful like a cat, carrying calm intelligence and kindness.<br>
-    She loves starry nights, where the sky feels limitless, full of dreams.<br>
-    Her favorite colors paint her world in light blue and black.</p>
+    <p>
+      She is warm like a tulip, gentle like a petal.<br>
+      She is playful like a cat, carrying calm intelligence and kindness.<br>
+      She loves starry nights, where the sky feels limitless, full of dreams.<br>
+      Her favorite colors paint her world in light blue and black.
+    </p>
     <button onclick="next()">Next →</button>
   </div>
-<script>function next(){ window.location.href = "atmosphere.html"; }</script>
+
+  <!-- Floating hearts -->
+  <div class="heart" style="left:20%;animation-delay:0s;">💗</div>
+  <div class="heart" style="left:40%;animation-delay:2s;">💗</div>
+  <div class="heart" style="left:70%;animation-delay:4s;">💗</div>
+
+<script>
+  function next(){ window.location.href = "atmosphere.html"; }
+</script>
+
+<!-- Dreamy audio -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/03/16/audio_4a5b6c7d8e.mp3?filename=mystery-ambient-110456.mp3" type="audio/mpeg">
 </audio>
