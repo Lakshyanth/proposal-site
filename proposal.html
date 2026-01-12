@@ -34,14 +34,25 @@
     line-height:1.6;
     margin-bottom:30px;
   }
+  .buttons {
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+  }
   button {
-    padding:12px 18px;
+    padding:12px 20px;
     font-weight:700;
     color:#081324;
     background:#ffb6d6;
     border:none;
     border-radius:12px;
     cursor:pointer;
+    font-family:Inter,sans-serif;
+  }
+  .note {
+    margin-top:25px;
+    font-size:0.9em;
+    opacity:0.7;
     font-family:Inter,sans-serif;
   }
   .fall {
@@ -70,9 +81,18 @@
       and idk ⭐ it's just been few weeks since we met but I felt safe with u, u r my comfort zone.<br><br>
       🌷 And idk if this is the right time to do this but my heart just wanted to confess abt my feelings. 
       Ik I didn't see you but that doesn't matter to me, idgaf abt how ppl look at you but I can promise that 
-      my feelings on you are not gonna change even if u look ugly or beautiful.
+      my feelings on you are not gonna change even if u look ugly or beautiful. 
+      So I don't wanna force you to send a pic or smtg like that and I just want to let u know 
+      that there's no rush I will wait for your answer.
     </p>
-    <button onclick="alert('💍 She said YES!')">💍</button>
+
+    <!-- Proposal buttons -->
+    <div class="buttons">
+      <button onclick="alert('💖 You said YES!')">Yes</button>
+      <button onclick="alert('🌷 That’s okay, I’ll wait patiently.')">No</button>
+    </div>
+
+    <div class="note">(If not interested, just DM me on Instagram)</div>
   </div>
 
   <!-- Emoji shower -->
@@ -85,7 +105,7 @@
 
   <!-- Soft piano audio -->
   <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7f9f3f6f3b.mp3?filename=soft-piano-ambient-110397.mp3" type="audio/mpeg">
+    <source src="https://www.chosic.com/wp-content/uploads/2021/03/Scott-Buckley-In-Dreams.mp3" type="audio/mpeg">
   </audio>
 </body>
 </html>
